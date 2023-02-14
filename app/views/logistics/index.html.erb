@@ -3,8 +3,7 @@
 <% if user_signed_in? %>
   <% if current_user == @user || current_user.admin? %>
     <%= link_to "新規投稿へ", new_logistic_path %>
-  <% end %>
-<% end %>
+    <% end %>
 <div class="logistics-container">
   <% @logistics.each do |t| %>
     <div class="logistic">
@@ -14,10 +13,11 @@
       <%= t.basic_info %>
       <%= t.url %>
       <%= t.content %>
-      <%= t.image %>
       <%= t.rating %>
       <%= link_to "詳細へ", logistic_path(t.id) %>
      
       </div>
   <% end %>
 </div>
+<% end %>
+

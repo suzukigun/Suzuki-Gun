@@ -1,0 +1,18 @@
+<h1>GeekLogistics</h1>
+<h3>Logistic詳細</h3>
+<div class="logistic">
+  <p><%= @logistic.company %></p>
+      <%= @logistic.basic_info %>
+      <%= @logistic.url %>
+      <%= @logistic.content %>
+      <%= @logistic.image %>
+      <%= @logistic.rating %>
+  <p><%= @logistic.created_at %></p>
+</div>
+<% if user_signed_in? %>
+  <% if current_user == @user || current_user.admin? %>
+<%= link_to "編集する", edit_logistic_path(@logistic.id) %>
+<%= button_to "削除する", logistic_path(@logistic.id), method: :delete %>
+<% end %>
+<% end %>
+<%= link_to "Logistic一覧に戻る", logistics_path %>

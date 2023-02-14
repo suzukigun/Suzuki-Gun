@@ -1,0 +1,43 @@
+<h1>GeekLogistics</h1>
+<h3>新規logistics</h3>
+<%= form_for @logistic do |f| %>
+
+  <div class="field">
+    <%= f.label :company %>
+    <%= f.text_field :company, :size => 30 %>
+  </div>
+
+  <div class="field">
+  <%= f.label :basic_info  %>
+  <%= f.text_area :basic_info, :size => "30x2" %>
+</div>
+ 
+<div class="field">
+    <%= f.label :url %>
+    <%= f.text_field :url, :size => 30 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :content  %>
+    <%= f.text_area :content, :size => "30x2" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image %>
+    <%= f.text_field :image, :size => 30 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :rating %>
+    <%= f.text_field :rating, :size => 30 %>
+  </div>
+
+  <div class="field">
+  <%= f.label :image %>
+  <%= f.file_field :image %>
+</div>
+
+  <%= f.submit "投稿する" %>
+  <% end %>
+  
+  <%= link_to "一覧に戻る", logistics_path %>

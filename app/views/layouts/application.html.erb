@@ -13,15 +13,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+JP&display=swap" rel="stylesheet">
 
-    </head>
+</head>
 
-  <body>
-  <% if user_signed_in? %>
-  <%= button_to 'ログアウト', destroy_user_session_path, method: :delete %>
-  <% else %>
-  <%= link_to "ログイン", logistics_path %>
-  <%= link_to "新規登録", new_user_registration_path %>
-  <% end %>
+<body>
+  <header>
+    </div>
+  </header>
+  <main>
     <%= yield %>
+  </main>
   </body>
 </html>

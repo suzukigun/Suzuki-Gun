@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Geeklogistics</title>
+    <title>トラック侍</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -12,15 +12,23 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+JP&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
   <header>
-    </div>
-  </header>
-  <main>
-    <%= yield %>
-  </main>
+  <h1>トラック侍</h1>
+     </div class="header-list" >
+     <ul>
+      <li><%= link_to "ホーム", tops_path %></li>
+      <li><%= link_to "新規投稿",new_logistic_path %></li>
+     </ul>
+     </div>
+    </header>
+   <main>
+     <%= yield %>
+   </main>
+   <footer>
+      <p>Copyright © Gun All Rights Reserved.</p>
+    </footer>
   </body>
 </html>

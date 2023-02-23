@@ -1,5 +1,6 @@
-<h1>GeekLogistics</h1>
-<h3>logistics一覧</h3>
+<h1>トラック侍</h1>
+<h3>企業一覧</h3>
+
 <% if user_signed_in? %>
   <% if current_user.id == 1 %>
     <%= link_to "新規投稿へ", new_logistic_path %>
@@ -7,13 +8,12 @@
 <div class="logistics-container">
   <% @logistics.each do |t| %>
     <div class="logistic">
-    <%= t.user.email %>
-    <%= image_tag t.image_url, size: "250x200" if t.image? %>
-      <%= t.company %>
-      <%= t.basic_info %>
-      <%= t.url %>
-      <%= t.content %>
-      <%= t.rating %>
+   
+    <%= image_tag t.image_url, size: "250x200" if t.image? %><br>
+      <%= t.company %><br>
+      <%= t.basic_info %><br>
+      
+      <%= t.rating %><br>
       <%= link_to "詳細へ", logistic_path(t.id) %>
       <%= link_to "編集する", edit_logistic_path(t.id) %>
       <%= button_to "削除する", logistic_path(t.id), method: :delete %> 
@@ -22,4 +22,3 @@
   <% end %>
 </div>
 <% end %>
-
